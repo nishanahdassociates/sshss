@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>S2C - Computer Science | SSHSS Moorkanadu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #0a3d62;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-title img {
+      height: 70px;
+    }
+
+    .logo-title h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .logo-title h3 {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .menu-button {
+      display: none;
+      font-size: 26px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav {
+      background-color: #3c6382;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    a.button-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0a3d62;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    a.button-link:hover {
+      background-color: #1e5799;
+    }
+
+    footer {
+      background-color: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo-title {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    @media (max-width: 480px) {
+      iframe {
+        height: 300px;
+      }
+
+      .logo-title h1 {
+        font-size: 16px;
+      }
+
+      .logo-title h3 {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-title">
+      <img src="https://sshssonline.com/wp-content/uploads/2022/06/cropped-Emblem-Latest-70x103.png" alt="School Logo">
+      <div>
+        <h1>S2C - Computer Science</h1>
+        <h3>SSHSS Moorkanadu</h3>
+      </div>
+    </div>
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <nav>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#school">School</a>
+      <a href="#teachers">Teachers</a>
+      <a href="#students">Students</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="section" id="about">
+      <h2>About Our Class</h2>
+      <p>Welcome to the official website of S2C, the Computer Science batch at SSHSS Moorkanadu. We are passionate about technology, learning, and building a better future together.</p>
+      <p><strong>Class Teacher:</strong> Unus Muhammad Saleem</p>
+    </div>
+
+    <div class="section" id="school">
+      <h2>About Our School</h2>
+      <p>Learn more about our school by visiting the official website below:</p>
+      <iframe src="https://sshssonline.com/" allowfullscreen></iframe>
+    </div>
+
+    <div class="section" id="teachers">
+      <h2>Our Teachers</h2>
+      <p>Meet our dedicated teaching staff who guide and inspire us every day.</p>
+      <a href="https://sshssonline.com/our-team/" class="button-link" target="_blank">Visit Teacher Profiles</a>
+    </div>
+
+  
+
+    <div class="section" id="subjects">
+      <h2>Subjects We Learn</h2>
+      <ul>
+        <li>Computer Science</li>
+        <li>Physics</li>
+        <li>Mathematics</li>
+        <li>English</li>
+        <li>Arabic / Malayalam / Hindi</li>
+        <li>Chemistry</li>
+      </ul>
+    </div>
+
+    <div class="section" id="contact">
+      <h2>Contact</h2>
+      <p><strong>School:</strong> SSHSS Moorkanadu</p>
+      <p><strong>Email:</strong> sshss11055@gmail.com</p>
+      <p><strong>Location:</strong> Moorkanadu, Kerala, India</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 S2C - SSHSS Moorkanadu. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
